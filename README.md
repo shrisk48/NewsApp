@@ -19,9 +19,6 @@ The app fetches real-time news data from the **NewsAPI** and displays it in an e
 - **Loading Indicator:**  
   Displays a spinner while fetching news data.
 
-- **Error Handling:**  
-  User-friendly error messages for failed API requests or empty results.
-
 ---
 
 ## 🛠️ Technologies Used
@@ -36,8 +33,11 @@ The app fetches real-time news data from the **NewsAPI** and displays it in an e
 ## 📷 Screenshots
 
 ![Image](https://github.com/user-attachments/assets/21e064e7-490d-45f8-ab2e-256d1e9f50d3)
+
 ![Image](https://github.com/user-attachments/assets/388249a9-b7f4-4c66-aa4a-9025782f3679)
+
 ![Image](https://github.com/user-attachments/assets/306bdafd-e45a-4085-8290-92be54d53f34)
+
 ![Image](https://github.com/user-attachments/assets/e294c6cf-2b0b-419a-bee8-c0b4396baa86)
 
 
