@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #34495e;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links-active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+}
+
+.search-bar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-icon {
+  margin-left: -30px;
+  margin-bottom: 1px;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.home {
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.home input {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.home input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.news-card {
+  width: 320px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.news-card h3 {
+  font-size: 20px;
+  margin: 15px 0 10px 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+.news-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.news-card a {
+  display: inline-block;
+  font-size: 16px;
+  color: #3498db;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-card a:hover {
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .news-card {
+    width: 100%;
+  }
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .news-list {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .news-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .home input {
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 20px;
+  }
+
+  .navbar li {
+    font-size: 16px;
+  }
+
+  .home input {
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 150px;
+  }
+}
+
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .news-card h3 {
+    font-size: 18px;
+  }
+
+  .news-card p {
+    font-size: 14px;
+  }
+
+  .read-more {
+    padding: 6px 12px;
+  }
+}
